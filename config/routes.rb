@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   #ルートパスとして'public/homes#top'を指定
   root to: 'public/homes#top'
+#   moduleを使いU変えずにファイル構成指定のパスにしたいを実装
+  scope module: :public do
+    get 'about' => 'homes#about'
+  end
 # namespaceを使いURL指定のパスにファイル構成指定のパスにしたいを実装
 namespace :admin do
   get '/' => 'homes#top'
