@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
- 
-# namespaceを使いURL指定のパスにしたいファイル構成指定のパスにしたいを実装
+  #ルートパスとして'public/homes#top'を指定
+  root to: 'public/homes#top'
+# namespaceを使いURL指定のパスにファイル構成指定のパスにしたいを実装
 namespace :admin do
   get '/' => 'homes#top'
 end
